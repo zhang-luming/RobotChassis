@@ -9,10 +9,10 @@ WheelOdomCalibrator::WheelOdomCalibrator()
     : Node("wheel_odom_calibrator"),
       state_(IDLE),
       stop_count_(0),
-      log_file_opened_(false),
-      initialized_(false),
       prev_wheel_yaw_(0.0),
-      prev_imu_yaw_(0.0) {
+      prev_imu_yaw_(0.0),
+      initialized_(false),
+      log_file_opened_(false) {
 
   // 声明并获取参数
   this->declare_parameter("min_rotation_angle", 90.0);
